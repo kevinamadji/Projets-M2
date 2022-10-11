@@ -1,5 +1,13 @@
-from flask import Flask
-from flask_mysqldb import MySQL
+from flask import Flask, make_response, redirect, url_for, render_template, request
+from models import Personnage, Item, db
+from sqlalchemy.sql import func
+
+
+
+
+def creer_application():
+    app_flask = Flask(__name__)
+
 
 app = Flask(__name__)
 
